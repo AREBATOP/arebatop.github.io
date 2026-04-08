@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>AREBATOP - Carte de visite</title>
+<style>
+#formulaire {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#formulaire form {
+    display: flex;
+    flex-direction: column;
+}
+
+#formulaire input,
+#formulaire textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#formulaire button {
+    background: gold;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* CENTRAR TODO */
+body {
+    font-family: Arial;
+    background: #111;
+    color: white;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* TARJETA */
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* TEXTO */
+h1 {
+    color: #FFD700;
+}
+
+p {
+    color: #ccc;
+}
+
+button {
+    background: #ffd700;       /* color amarillo */
+    color: black;              /* texto negro */
+    border: none;              /* sin borde feo */
+    padding: 12px 25px;        /* tamaño del botón */
+    border-radius: 10px;       /* esquinas redondas */
+    cursor: pointer;           /* cambia el cursor */
+    font-weight: bold;         /* texto más fuerte */
+    transition: 0.3s;          /* animación suave */
+}
+
+.services li {
+    margin: 6px 0;
+}
+</style>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #1c1c1c;
+}
+</style>
+ </head>
+  
+<body>
+
+<div class="card">
+    <h1>⭐ AREBATOP</h1>
+    <p>Artisan Val-de-Marne (94)</p>
+
+    <ul style="list-style: none; padding: 0; text-align: center;">
+        <li>Peinture intérieure</li>
+        <li>Peinture extérieure</li>
+        <li>Rénovation</li>
+        <li>Enduit / Placo</li>
+    </ul>
+
+    <button onclick="ouvrirFormulaire()">Demander un devis</button>
+</div>
+ <div id="formulaire" style="display:none;">
+    <form>
+        <input type="text" placeholder="Votre nom" required>
+        <input type="tel" placeholder="Téléphone" required>
+        <textarea placeholder="Votre projet..." required></textarea>
+
+        <button type="submit">Envoyer la demande</button>
+    </form>
+</div>
+<script>
+function ouvrirFormulaire() {
+    const card = document.querySelector(".card");
+    const form = document.getElementById("formulaire");
+
+    if (card) card.style.display = "none";
+    if (form) form.style.display = "block";
+}
+</script>
+ 
+</body>
+</html>
