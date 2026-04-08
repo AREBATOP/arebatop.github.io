@@ -99,6 +99,12 @@ button {
     border: none;
     cursor: pointer;
 }
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
 </style>
 <style>
 body {
@@ -127,11 +133,15 @@ body {
         <li>Enduit / Placo</li>
     </ul>
 
+    <div class="buttons">
+
     <button onclick="ouvrirFormulaire()">Demander un devis</button>
 
-<a href="https://wa.me/33665733916?text=Bonjour%20je%20souhaite%20un%20devis" target="_blank">
-    <button class="whatsapp">WhatsApp</button>
-</a>
+    <a href="https://wa.me/33665733916?text=Bonjour%20je%20souhaite%20un%20devis" target="_blank">
+        <button class="whatsapp">WhatsApp</button>
+    </a>
+
+</div>
 </div>
  <div id="formulaire" style="display:none;">
     <form>
