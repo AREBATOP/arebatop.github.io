@@ -133,6 +133,26 @@ body {
 
     background: #1c1c1c;
 }
+    .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: #FFD700;
+    color: black;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
 </style>
  </head>
   
@@ -153,11 +173,15 @@ body {
 
    <div class="buttons">
 
-    <button onclick="ouvrirFormulaire()">Devis</button>
+    <div class="buttons">
 
-    <a href="https://wa.me/33665733916?text=Bonjour%20je%20souhaite%20un%20devis" target="_blank">
+    button class="btn" onclick="ouvrirFormulaire()">Devis</button>
+
+    <a href="https://wa.me/33665733916" target="_blank">
         <button class="whatsapp">WhatsApp</button>
     </a>
+
+</div>
 
 </div>
 
