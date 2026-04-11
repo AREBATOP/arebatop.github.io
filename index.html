@@ -1,124 +1,326 @@
-<!DOCTYPE html><html>
+ 
+ <!DOCTYPE html>
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="Wp0a6Mgfta5Bm8EGYm61B6s8yE4a3ckdQls04gybG9Y" />
- 
-<title>AREBATOP</title><style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #0f172a;
-    color: white;
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JJVarela Rénovation</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#f5f5f5;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
+/* NAV */
+nav{
+background:#1a1a1a;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 15px;
-    padding: 20px;
+/* HERO */
+.hero{
+height:320px;
+background:url('banner.jpg') center center no-repeat;
+background-size:cover;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center;
 }
 
-.card {
-    text-align: center;
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.3);
+}
+.hero h1{
+font-size:56px;
+margin:0;
+color:#ffffff;
+text-shadow: 3px 3px 12px rgba(0,0,0,1);
+position:relative;
+z-index:2;
 }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+.hero p{
+font-size:24px;
+color:#ffffff;
+text-shadow: 2px 2px 10px rgba(0,0,0,1);
+position:relative;
+z-index:2;
+font-weight:600;
 }
 
-.card img:hover {
-    transform: scale(1.05);
+/* SECTION */
+.section{
+padding:50px 20px;
+text-align:center;
 }
 
-.card p {
-    margin: 5px 0;
+/* SERVICES */
+.services{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+.box{
+background:white;
+padding:20px;
+border-radius:10px;
+width:260px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+.box img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+margin-top:10px;
 }
 
-/* ZOOM */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
+/* GRID (CLAVE PARA NO DEFORMAR) */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+.card{
+background:white;
+padding:10px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+.card p{
+margin-top:8px;
 }
 
-.modal img {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 80%;
+/* CONTACT */
+.form{
+max-width:400px;
+margin:auto;
+}
+input, textarea, button{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
+}
+button{
+background:#E63946;
+color:white;
+border:none;
 }
 
-.close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 40px;
-    cursor: pointer;
+/* FOOTER */
+footer{
+background:#1a1a1a;
+color:white;
+text-align:center;
+padding:20px;
+}
+img{
+transition: transform 0.3s ease;
+cursor:pointer;
 }
 
-/* WhatsApp */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    padding: 15px;
-    border-radius: 50px;
-    color: white;
-    text-decoration: none;
+img:hover{
+transform: scale(1.08);
 }
-</style></head><body><header>
-<h1>AREBATOP</h1>
-<p>Catalogue Vinyle Premium</p>
-</header><div class="gallery"><!-- TODAS LAS IMÁGENES --><div class="card"><img src="CT13-0.jpg" onclick="openImage(this.src)"><p>CT13</p></div>
-<div class="card"><img src="CT24-0.jpg" onclick="openImage(this.src)"><p>CT24</p></div>
-<div class="card"><img src="CT68-0.jpg" onclick="openImage(this.src)"><p>CT68</p></div>
-<div class="card"><img src="CT69-0.jpg" onclick="openImage(this.src)"><p>CT69</p></div>
-<div class="card"><img src="CT76-0.jpg" onclick="openImage(this.src)"><p>CT76</p></div>
-<div class="card"><img src="CT84-0.jpg" onclick="openImage(this.src)"><p>CT84</p></div><div class="card"><img src="J3-0.jpg" onclick="openImage(this.src)"><p>J3</p></div>
-<div class="card"><img src="J5-0.jpg" onclick="openImage(this.src)"><p>J5</p></div>
-<div class="card"><img src="K6-0.jpg" onclick="openImage(this.src)"><p>K6</p></div>
-<div class="card"><img src="K7-0.jpg" onclick="openImage(this.src)"><p>K7</p></div><div class="card"><img src="L2-0.jpg" onclick="openImage(this.src)"><p>L2</p></div>
-<div class="card"><img src="L3-0.jpg" onclick="openImage(this.src)"><p>L3</p></div><div class="card"><img src="AL09-0.jpg" onclick="openImage(this.src)"><p>AL09</p></div><div class="card"><img src="NF14-0.jpg" onclick="openImage(this.src)"><p>NF14</p></div>
-<div class="card"><img src="NF17-0.jpg" onclick="openImage(this.src)"><p>NF17</p></div>
-<div class="card"><img src="NF53-0.jpg" onclick="openImage(this.src)"><p>NF53</p></div>
-<div class="card"><img src="NF65-0.jpg" onclick="openImage(this.src)"><p>NF65</p></div><div class="card"><img src="NG09-0.jpg" onclick="openImage(this.src)"><p>NG09</p></div><div class="card"><img src="NH02-0.jpg" onclick="openImage(this.src)"><p>NH02</p></div>
-<div class="card"><img src="NH08-0.jpg" onclick="openImage(this.src)"><p>NH08</p></div>
-<div class="card"><img src="NH13-0.jpg" onclick="openImage(this.src)"><p>NH13</p></div>
-<div class="card"><img src="NH15-0.jpg" onclick="openImage(this.src)"><p>NH15</p></div>
-<div class="card"><img src="NH18-0.jpg" onclick="openImage(this.src)"><p>NH18</p></div><div class="card"><img src="RM14-0.jpg" onclick="openImage(this.src)"><p>RM14</p></div>
-<div class="card"><img src="RM21-0.jpg" onclick="openImage(this.src)"><p>RM21</p></div>
-<div class="card"><img src="RM30-0.jpg" onclick="openImage(this.src)"><p>RM30</p></div><div class="card"><img src="U50-0.jpg" onclick="openImage(this.src)"><p>U50</p></div>
-<div class="card"><img src="WI01-0.jpg" onclick="openImage(this.src)"><p>WI01</p></div></div><!-- ZOOM --><div id="myModal" class="modal">
-<span class="close" onclick="closeImage()">&times;</span>
-<img id="imgGrande">
+</style>
+</head>
+
+<body>
+
+<nav>
+<div><strong>JJVarela Rénovation</strong></div>
+<div>
+<a href="#services">Services</a>
+<a href="#electricite">Électricité</a>
+<a href="#peinture">Peinture</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<div class="hero">
+<div>
+<h1>JJVarela Rénovation</h1>
+<p>Électricité & Peinture professionnelle</p>
+</div>
 </div>
 
-<a class="whatsapp" href="https://wa.me/33665733916?text=Bonjour%20je%20veux%20un%20devis%20AREBATOP%20je%20suis%20intéressé%20par%20le%20catalogue" target="_blank">
-💬 Demander devis
-</a>
+<!-- SERVICES -->
+<div class="section" id="services">
+<h2>Nos services</h2>
+
+<div class="services">
+
+<div class="box">
+<h3>⚡ Installation électrique</h3>
+<img src="Depannage tableau electrique.jpg">
+</div>
+
+<div class="box">
+<h3>🔧 Dépannage électrique</h3>
+<img src="Depannage prise electrique.jpg">
+</div>
+
+<div class="box">
+<h3>Intervention electrique</h3>
+<img src="Intervention.jpg">
+</div>
+
+</div>
+</div>
+
+<!-- ELECTRICITE (6 FOTOS PERFECTAS) -->
+<div class="section" id="electricite">
+<h2>Travaux d’électricité</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="Tableau electrique.jpg">
+<p>Installation tableau électrique</p>
+</div>
+
+<div class="card">
+<img src="Domotique.jpg">
+<p>Domotique professionnel</p>
+</div>
+
+<div class="card">
+<img src="Demarrage.jpg">
+<p>Rénovation électrique</p>
+</div>
+
+<div class="card">
+<img src="Installation.jpg">
+<p>Installation éclairage</p>
+</div>
+
+<div class="card">
+<img src="Comunication.jpg">
+<p>Tableau de comunication</p>
+</div>
+
+<div class="card">
+<img src="Prise electrique moderne.jpg">
+<p>Installation prises & lumière</p>
+</div>
+
+</div>
+</div>
+
+<!-- PEINTURE (6 FOTOS PERFECTAS) -->
+<div class="section" id="peinture">
+<h2>Travaux de peinture</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="Beton cire2.jpg">
+<p>Beton intérieure moderne</p>
+</div>
+
+<div class="card">
+<img src="Salon.jpg">
+<p>Finitions propres</p>
+</div>
+
+<div class="card">
+<img src="Renovation1.jpg">
+<p>Renovation complete</p>
+</div>
+
+<div class="card">
+<img src="Salle de bain.jpg">
+<p>Renovation salle de bains</p>
+</div>
+
+<div class="card">
+<img src="Mur vert.jpg">
+<p>Travaux muraux</p>
+</div>
+
+<div class="card">
+<img src="Beton cire marches.jpg">
+<p>Beton cire</p>
+</div>
+
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Contact</h2>
+
+<p>84 Rue du Pont de Créteil, 94100 Saint-Maur-des-Fossés</p>
+<p>06 18 76 74 18</p>
+<p>varelag@hotmail.fr</p>
+
+<div class="form">
+<input placeholder="Nom">
+<input placeholder="Téléphone">
+<textarea placeholder="Votre demande"></textarea>
+<button onclick="envoyer()">Envoyer WhatsApp</button>
+</div>
+
+</div>
+
+<footer>
+SIRET: 817474026RM94
+</footer>
 
 <script>
-function openImage(src) {
-    document.getElementById("myModal").style.display = "block";
-    document.getElementById("imgGrande").src = src;
+function envoyer(){
+window.open("https://wa.me/33618767418?text=Demande de devis");
 }
-function closeImage() {
-    document.getElementById("myModal").style.display = "none";
-}
-</script></body>
+</script>
+
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:999;">
+  <img id="lightbox-img" style="max-width:90%; max-height:90%;">
+</div>
+
+<script>
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('click', function(){
+    document.getElementById('lightbox').style.display = 'flex';
+    document.getElementById('lightbox-img').src = this.src;
+  });
+});
+
+document.getElementById('lightbox').addEventListener('click', function(){
+  this.style.display = 'none';
+});
+</script>
+
+</body>
 </html>
