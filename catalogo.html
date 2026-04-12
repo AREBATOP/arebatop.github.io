@@ -1,0 +1,125 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="TU-CODIGO">
+<title>...</title>
+<title>AREBATOP</title><style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+/* ZOOM */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+.modal img {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+}
+</style></head><body><header>
+<h1>AREBATOP</h1>
+<p>Catalogue Vinyle Premium</p>
+</header><div class="gallery"><!-- TODAS LAS IMÁGENES --><div class="card"><img src="CT13-0.jpg" onclick="openImage(this.src)"><p>CT13</p></div>
+<div class="card"><img src="CT24-0.jpg" onclick="openImage(this.src)"><p>CT24</p></div>
+<div class="card"><img src="CT68-0.jpg" onclick="openImage(this.src)"><p>CT68</p></div>
+<div class="card"><img src="CT69-0.jpg" onclick="openImage(this.src)"><p>CT69</p></div>
+<div class="card"><img src="CT76-0.jpg" onclick="openImage(this.src)"><p>CT76</p></div>
+<div class="card"><img src="CT84-0.jpg" onclick="openImage(this.src)"><p>CT84</p></div><div class="card"><img src="J3-0.jpg" onclick="openImage(this.src)"><p>J3</p></div>
+<div class="card"><img src="J5-0.jpg" onclick="openImage(this.src)"><p>J5</p></div>
+<div class="card"><img src="K6-0.jpg" onclick="openImage(this.src)"><p>K6</p></div>
+<div class="card"><img src="K7-0.jpg" onclick="openImage(this.src)"><p>K7</p></div><div class="card"><img src="L2-0.jpg" onclick="openImage(this.src)"><p>L2</p></div>
+<div class="card"><img src="L3-0.jpg" onclick="openImage(this.src)"><p>L3</p></div><div class="card"><img src="AL09-0.jpg" onclick="openImage(this.src)"><p>AL09</p></div><div class="card"><img src="NF14-0.jpg" onclick="openImage(this.src)"><p>NF14</p></div>
+<div class="card"><img src="NF17-0.jpg" onclick="openImage(this.src)"><p>NF17</p></div>
+<div class="card"><img src="NF53-0.jpg" onclick="openImage(this.src)"><p>NF53</p></div>
+<div class="card"><img src="NF65-0.jpg" onclick="openImage(this.src)"><p>NF65</p></div><div class="card"><img src="NG09-0.jpg" onclick="openImage(this.src)"><p>NG09</p></div><div class="card"><img src="NH02-0.jpg" onclick="openImage(this.src)"><p>NH02</p></div>
+<div class="card"><img src="NH08-0.jpg" onclick="openImage(this.src)"><p>NH08</p></div>
+<div class="card"><img src="NH13-0.jpg" onclick="openImage(this.src)"><p>NH13</p></div>
+<div class="card"><img src="NH15-0.jpg" onclick="openImage(this.src)"><p>NH15</p></div>
+<div class="card"><img src="NH18-0.jpg" onclick="openImage(this.src)"><p>NH18</p></div><div class="card"><img src="RM14-0.jpg" onclick="openImage(this.src)"><p>RM14</p></div>
+<div class="card"><img src="RM21-0.jpg" onclick="openImage(this.src)"><p>RM21</p></div>
+<div class="card"><img src="RM30-0.jpg" onclick="openImage(this.src)"><p>RM30</p></div><div class="card"><img src="U50-0.jpg" onclick="openImage(this.src)"><p>U50</p></div>
+<div class="card"><img src="WI01-0.jpg" onclick="openImage(this.src)"><p>WI01</p></div></div><!-- ZOOM --><div id="myModal" class="modal">
+<span class="close" onclick="closeImage()">&times;</span>
+<img id="imgGrande">
+</div>
+
+<a class="whatsapp" href="https://wa.me/33665733916?text=Bonjour%20je%20veux%20un%20devis%20AREBATOP%20je%20suis%20intéressé%20par%20le%20catalogue" target="_blank">
+💬 Demander devis
+</a>
+
+<script>
+function openImage(src) {
+    document.getElementById("myModal").style.display = "block";
+    document.getElementById("imgGrande").src = src;
+}
+function closeImage() {
+    document.getElementById("myModal").style.display = "none";
+}
+</script></body>
+</html>
